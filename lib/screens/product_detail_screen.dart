@@ -43,7 +43,7 @@ class ProductDetailScreen extends StatelessWidget {
             SizedBox(height: 10),
             Text(
               '\$${loadedProduct.price}',
-              style: Theme.of(context).textTheme.headline3,
+              style: Theme.of(context).textTheme.headline4,
             ),
             SizedBox(
               height: 10,
@@ -55,7 +55,7 @@ class ProductDetailScreen extends StatelessWidget {
                 loadedProduct.description,
                 textAlign: TextAlign.center,
                 softWrap: true,
-                style: Theme.of(context).textTheme.headline3,
+                style: Theme.of(context).textTheme.headline4,
               ),
             ),
           ],

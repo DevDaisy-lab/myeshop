@@ -12,7 +12,7 @@ class AppDrawer extends StatelessWidget {
           AppBar(
             title: Text(
               'Hello Friend!',
-              style: Theme.of(context).textTheme.headline2,
+              style: Theme.of(context).textTheme.headline4,
             ),
             automaticallyImplyLeading: false,
           ),
@@ -21,7 +21,7 @@ class AppDrawer extends StatelessWidget {
             leading: Icon(Icons.shop),
             title: Text(
               'Shop',
-              style: Theme.of(context).textTheme.headline3,
+              style: Theme.of(context).textTheme.headline4,
             ),
             onTap: () {
               Navigator.of(context).pushReplacementNamed('/');
@@ -32,7 +32,7 @@ class AppDrawer extends StatelessWidget {
             leading: Icon(Icons.payment),
             title: Text(
               'Orders',
-              style: Theme.of(context).textTheme.headline3,
+              style: Theme.of(context).textTheme.headline4,
             ),
             onTap: () {
               Navigator.of(context)
@@ -44,7 +44,7 @@ class AppDrawer extends StatelessWidget {
             leading: Icon(Icons.edit),
             title: Text(
               'Manage Products',
-              style: Theme.of(context).textTheme.headline3,
+              style: Theme.of(context).textTheme.headline4,
             ),
             onTap: () {
               Navigator.of(context)

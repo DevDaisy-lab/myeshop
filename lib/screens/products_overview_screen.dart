@@ -57,6 +57,7 @@ class _ProductsOverviewScreenState extends State<ProductsOverviewScreen> {
           ),
           actions: <Widget>[
             PopupMenuButton(
+              color: Colors.blue,
               onSelected: (FilterOptions selectedValue) {
                 setState(() {
                   if (selectedValue == FilterOptions.Favorites) {

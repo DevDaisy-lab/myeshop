@@ -53,7 +53,7 @@ class ProductItem extends StatelessWidget {
                           SnackBar(
                             content: Text(
                               'Added item to cart!',
-                              style: Theme.of(context).textTheme.headline3,
+                              style: Theme.of(context).textTheme.headline4,
                             ),
                             duration: Duration(seconds: 2),
                             action: SnackBarAction(
@@ -103,7 +103,7 @@ class ProductItem extends StatelessWidget {
                 ),
                 Text(
                   product.title,
-                  style: Theme.of(context).textTheme.headline4,
+                  style: Theme.of(context).textTheme.headline5,
                   textAlign: TextAlign.center,
                 ),
                 SizedBox(
@@ -111,7 +111,7 @@ class ProductItem extends StatelessWidget {
                 ),
                 Text(
                   '\$${product.price}',
-                  style: Theme.of(context).textTheme.headline4,
+                  style: Theme.of(context).textTheme.headline5,
                 ),
               ],
             ),

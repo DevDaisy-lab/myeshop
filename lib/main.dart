@@ -57,6 +57,12 @@ class MyApp extends StatelessWidget {
                     fontFamily: 'Lato',
                     color: Colors.black,
                     fontWeight: FontWeight.w400,
+                    fontSize: 18.0,
+                  ),
+                  headline5: TextStyle(
+                    fontFamily: 'Lato',
+                    color: Colors.black,
+                    fontWeight: FontWeight.w400,
                     fontSize: 16.0,
                   ),
                 ),
