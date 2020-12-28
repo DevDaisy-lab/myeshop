@@ -7,22 +7,22 @@ class SpecProductItem extends StatelessWidget {
     return ListView(
       //scrollDirection: Axis.horizontal,
       children: [
-        SizedBox(height: 15.0),
+        SizedBox(height: 5.0),
         CarouselSlider(
-          height: 200.0,
+          height: 170.0,
           enlargeCenterPage: true,
           autoPlay: true,
           aspectRatio: 16 / 9,
           enableInfiniteScroll: true,
           autoPlayAnimationDuration: Duration(milliseconds: 800),
-          viewportFraction: 0.8,
+          viewportFraction: 0.7,
           items: [
             Container(
               margin: EdgeInsets.all(5.0),
               decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(15.0),
+                borderRadius: BorderRadius.circular(10.0),
                 image: DecorationImage(
-                  image: AssetImage('assets/images/specprod1.jpg'),
+                  image: AssetImage('assets/images/specprod4.jpg'),
                   fit: BoxFit.cover,
                 ),
               ),
@@ -32,7 +32,7 @@ class SpecProductItem extends StatelessWidget {
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(10.0),
                 image: DecorationImage(
-                  image: AssetImage('assets/images/specprod2.jpg'),
+                  image: AssetImage('assets/images/specprod6.jpg'),
                   fit: BoxFit.cover,
                 ),
               ),
@@ -47,16 +47,16 @@ class SpecProductItem extends StatelessWidget {
                 ),
               ),
             ),
-            Container(
-              margin: EdgeInsets.all(5.0),
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(10.0),
-                image: DecorationImage(
-                  image: AssetImage('assets/images/specprod4.jpg'),
-                  fit: BoxFit.cover,
-                ),
-              ),
-            ),
+            // Container(
+            //   margin: EdgeInsets.all(5.0),
+            //   decoration: BoxDecoration(
+            //     borderRadius: BorderRadius.circular(10.0),
+            //     image: DecorationImage(
+            //       image: AssetImage('assets/images/specprod5.jpg'),
+            //       fit: BoxFit.cover,
+            //     ),
+            //   ),
+            // ),
           ],
         ),
       ],

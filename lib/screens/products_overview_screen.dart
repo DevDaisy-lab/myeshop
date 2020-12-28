@@ -5,6 +5,7 @@ import '../widgets/app_drawer.dart';
 import '../widgets/products_grid.dart';
 import '../widgets/spec_product_item.dart';
 import '../widgets/badge.dart';
+import '../widgets/banner.dart';
 import '../providers/cart.dart';
 import './cart_screen.dart';
 import '../providers/products.dart';
@@ -48,6 +49,7 @@ class _ProductsOverviewScreenState extends State<ProductsOverviewScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+        backgroundColor: Colors.white70,
         appBar: AppBar(
           title: Text(
             'Pirk Patogiai',
@@ -114,13 +116,10 @@ class _ProductsOverviewScreenState extends State<ProductsOverviewScreen> {
                         height: 200,
                         child: SpecProductItem(),
                       ),
-                      SizedBox(height: 10),
-                      Container(
-                        child: Text(
-                          'Ypatingi Pasiūlymai',
-                          style: Theme.of(context).textTheme.headline2,
-                        ),
-                      ),
+                      // SizedBox(
+                      //   height: 5,
+                      // ),
+                      Bannerr(),
                       SizedBox(height: 10),
                       Container(
                         width: 600,

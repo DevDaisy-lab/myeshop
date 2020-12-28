@@ -50,6 +50,10 @@ flutter:
     - assets/images/specprod2.jpg
     - assets/images/specprod3.jpg
     - assets/images/specprod4.jpg
+    - assets/images/specprod5.jpg
+    - assets/images/specprod6.jpg
+    - assets/images/banner.png
+    - assets/images/banner1.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.

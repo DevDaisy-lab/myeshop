@@ -32,14 +32,14 @@ class MyApp extends StatelessWidget {
           debugShowCheckedModeBanner: false,
           title: 'MyShop',
           theme: ThemeData(
-            primarySwatch: Colors.grey,
+            primarySwatch: Colors.blue,
             accentColor: Colors.grey,
             textTheme: ThemeData.light().textTheme.copyWith(
                   headline1: TextStyle(
                     fontFamily: 'Lato',
-                    color: Colors.black,
+                    color: Colors.white,
                     fontWeight: FontWeight.w400,
-                    fontSize: 26.0,
+                    fontSize: 24.0,
                   ),
                   headline2: TextStyle(
                     fontFamily: 'Lato',
@@ -49,15 +49,15 @@ class MyApp extends StatelessWidget {
                   ),
                   headline3: TextStyle(
                     fontFamily: 'Lato',
-                    color: Colors.black,
-                    fontWeight: FontWeight.w500,
-                    fontSize: 20.0,
+                    color: Colors.white,
+                    fontWeight: FontWeight.w600,
+                    fontSize: 18.0,
                   ),
                   headline4: TextStyle(
                     fontFamily: 'Lato',
                     color: Colors.black,
                     fontWeight: FontWeight.w400,
-                    fontSize: 18.0,
+                    fontSize: 16.0,
                   ),
                 ),
           ),
