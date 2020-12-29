@@ -49,7 +49,7 @@ class _ProductsOverviewScreenState extends State<ProductsOverviewScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: Colors.white70,
+        backgroundColor: Colors.lightBlue[50],
         appBar: AppBar(
           title: Text(
             'Pirk Patogiai',
