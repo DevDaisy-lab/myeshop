@@ -32,8 +32,6 @@ class MyApp extends StatelessWidget {
           debugShowCheckedModeBanner: false,
           title: 'MyShop',
           theme: ThemeData(
-            primarySwatch: Colors.blue,
-            accentColor: Colors.grey,
             textTheme: ThemeData.light().textTheme.copyWith(
                   headline1: TextStyle(
                     fontFamily: 'Lato',
@@ -66,6 +64,8 @@ class MyApp extends StatelessWidget {
                     fontSize: 16.0,
                   ),
                 ),
+            colorScheme: ColorScheme.fromSwatch(primarySwatch: Colors.blue)
+                .copyWith(secondary: Colors.grey),
           ),
           home: ProductsOverviewScreen(),
           routes: {

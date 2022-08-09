@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "16593358348",
+    "firebase_url": "https://eshopapp-c4c50.firebaseio.com",
+    "project_id": "eshopapp-c4c50",
+    "storage_bucket": "eshopapp-c4c50.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:16593358348:android:3274071155802a21ba2829",
+        "android_client_info": {
+          "package_name": "com.example.finished_eshop"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "16593358348-o4jtf6i182gi3dmqpi56b1i71djba1gj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC3nUxhuBggaQugzLfRlq0JOCx9mFDh3kg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "16593358348-o4jtf6i182gi3dmqpi56b1i71djba1gj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
