@@ -5,9 +5,9 @@ import '../screens/edit_product_screen.dart';
 import '../providers/products.dart';
 
 class UserProductItem extends StatelessWidget {
-  final String id;
-  final String title;
-  final String imageUrl;
+  final String? id;
+  final String? title;
+  final String? imageUrl;
 
   UserProductItem(this.id, this.title, this.imageUrl);
 
@@ -15,9 +15,9 @@ class UserProductItem extends StatelessWidget {
   Widget build(BuildContext context) {
     final scaffold = Scaffold.of(context);
     return ListTile(
-      title: Text(title),
+      title: Text(title!),
       leading: CircleAvatar(
-        backgroundImage: NetworkImage(imageUrl),
+        backgroundImage: NetworkImage(imageUrl!),
       ),
       trailing: Container(
         width: 100,
@@ -36,11 +36,14 @@ class UserProductItem extends StatelessWidget {
               onPressed: () async {
                 try {
                   await Provider.of<Products>(context, listen: false)
-                      .deleteProduct(id);
+                      .deleteProduct(id!);
                 } catch (error) {
                   scaffold.showSnackBar(
                     SnackBar(
-                      content: Text('Deleting failed!', textAlign: TextAlign.center,),
+                      content: Text(
+                        'Deleting failed!',
+                        textAlign: TextAlign.center,
+                      ),
                     ),
                   );
                 }

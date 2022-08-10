@@ -9,13 +9,15 @@ class SpecProductItem extends StatelessWidget {
       children: [
         SizedBox(height: 5.0),
         CarouselSlider(
-          height: 170.0,
-          enlargeCenterPage: true,
-          autoPlay: true,
-          aspectRatio: 16 / 9,
-          enableInfiniteScroll: true,
-          autoPlayAnimationDuration: Duration(milliseconds: 800),
-          viewportFraction: 0.7,
+          options: CarouselOptions(
+            autoPlay: true,
+            aspectRatio: 2.0,
+            enlargeCenterPage: true,
+            enlargeStrategy: CenterPageEnlargeStrategy.height,
+            height: 170.0,
+            enableInfiniteScroll: true,
+            viewportFraction: 0.7,
+          ),
           items: [
             Container(
               margin: EdgeInsets.all(5.0),
@@ -47,16 +49,6 @@ class SpecProductItem extends StatelessWidget {
                 ),
               ),
             ),
-            // Container(
-            //   margin: EdgeInsets.all(5.0),
-            //   decoration: BoxDecoration(
-            //     borderRadius: BorderRadius.circular(10.0),
-            //     image: DecorationImage(
-            //       image: AssetImage('assets/images/specprod5.jpg'),
-            //       fit: BoxFit.cover,
-            //     ),
-            //   ),
-            // ),
           ],
         ),
       ],

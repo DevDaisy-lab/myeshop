@@ -52,7 +52,7 @@ class _ProductsOverviewScreenState extends State<ProductsOverviewScreen> {
         backgroundColor: Colors.lightBlue[50],
         appBar: AppBar(
           title: Text(
-            'Pirk Patogiai',
+            'Buy Comfortably',
             style: Theme.of(context).textTheme.headline1,
           ),
           actions: <Widget>[
@@ -91,6 +91,7 @@ class _ProductsOverviewScreenState extends State<ProductsOverviewScreen> {
               builder: (_, cart, ch) => Badge(
                 child: ch!,
                 value: cart.itemCount.toString(),
+                color: Colors.blue.shade300,
               ),
               child: IconButton(
                 icon: Icon(
@@ -117,14 +118,11 @@ class _ProductsOverviewScreenState extends State<ProductsOverviewScreen> {
                         height: 200,
                         child: SpecProductItem(),
                       ),
-                      // SizedBox(
-                      //   height: 5,
-                      // ),
                       Bannerr(),
-                      SizedBox(height: 10),
+                      SizedBox(height: 15),
                       Container(
                         width: 600,
-                        height: 800,
+                        height: 1000,
                         child: ProductsGrid(_showOnlyFavorites),
                       ),
                     ],

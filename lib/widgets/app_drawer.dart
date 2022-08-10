@@ -11,7 +11,7 @@ class AppDrawer extends StatelessWidget {
         children: <Widget>[
           AppBar(
             title: Text(
-              'Hello Friend!',
+              'Hello There!',
               style: Theme.of(context).textTheme.headline4,
             ),
             automaticallyImplyLeading: false,

@@ -8,7 +8,6 @@ class Bannerr extends StatelessWidget {
         children: [
           Container(
             child: Image.asset(
-              //'assets/images/banner.png',
               'assets/images/banner1.png',
               height: 100,
               width: MediaQuery.of(context).size.width,
@@ -20,7 +19,7 @@ class Bannerr extends StatelessWidget {
             child: Container(
               alignment: Alignment.center,
               child: Text(
-                'Ypatingi Pasiūlymai',
+                'Special Offers',
                 style: Theme.of(context).textTheme.headline3,
               ),
             ),

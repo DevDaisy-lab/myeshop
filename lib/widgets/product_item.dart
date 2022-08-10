@@ -67,7 +67,7 @@ class ProductItem extends StatelessWidget {
                       },
                       color: Theme.of(context).accentColor,
                     ),
-                    SizedBox(width: 15),
+                    SizedBox(width: 10),
                     Consumer<Product>(
                       builder: (ctx, product, _) => IconButton(
                         icon: Icon(
@@ -86,8 +86,8 @@ class ProductItem extends StatelessWidget {
                 Hero(
                   tag: product.id,
                   child: Container(
-                    height: 60.0,
-                    width: 60.0,
+                    height: 55.0,
+                    width: 55.0,
                     decoration: BoxDecoration(
                       image: DecorationImage(
                         image: NetworkImage(
@@ -99,7 +99,7 @@ class ProductItem extends StatelessWidget {
                   ),
                 ),
                 SizedBox(
-                  height: 3.0,
+                  height: 2.0,
                 ),
                 Text(
                   product.title,
@@ -107,7 +107,7 @@ class ProductItem extends StatelessWidget {
                   textAlign: TextAlign.center,
                 ),
                 SizedBox(
-                  height: 5.0,
+                  height: 3.0,
                 ),
                 Text(
                   '\$${product.price}',
