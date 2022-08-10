@@ -58,7 +58,7 @@ class MyApp extends StatelessWidget {
                     fontFamily: 'Lato',
                     color: Colors.black,
                     fontWeight: FontWeight.w400,
-                    fontSize: 16.0,
+                    fontSize: 15.0,
                   ),
                 ),
             colorScheme: ColorScheme.fromSwatch(primarySwatch: Colors.blue)

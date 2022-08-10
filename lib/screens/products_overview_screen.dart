@@ -50,10 +50,6 @@ class _ProductsOverviewScreenState extends State<ProductsOverviewScreen> {
     return Scaffold(
       backgroundColor: Colors.lightBlue[50],
       appBar: AppBar(
-        title: Text(
-          'Buy Comfortably',
-          style: Theme.of(context).textTheme.headline1,
-        ),
         actions: <Widget>[
           PopupMenuButton(
             color: Colors.blue,
