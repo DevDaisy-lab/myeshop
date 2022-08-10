@@ -20,6 +20,7 @@ class ProductsGrid extends StatelessWidget {
         child: GridView.builder(
           // padding: const EdgeInsets.all(2.0),
           scrollDirection: Axis.vertical,
+          physics: ClampingScrollPhysics(),
           itemCount: products.length,
           itemBuilder: (ctx, i) => ChangeNotifierProvider.value(
             // builder: (c) => products[i],
