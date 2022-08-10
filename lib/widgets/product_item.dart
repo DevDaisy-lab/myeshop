@@ -6,11 +6,7 @@ import '../providers/product.dart';
 import '../providers/cart.dart';
 
 class ProductItem extends StatelessWidget {
-  // final String id;
-  // final String title;
-  // final String imageUrl;
-
-  // ProductItem(this.id, this.title, this.imageUrl);
+  bool press = false;
 
   @override
   Widget build(BuildContext context) {
@@ -47,14 +43,20 @@ class ProductItem extends StatelessWidget {
                         Icons.shopping_cart,
                       ),
                       onPressed: () {
-                        cart.addItem(product.id, product.price, product.title);
+                        cart.addItem(
+                          product.id,
+                          product.price,
+                          product.title,
+                          product.imageUrl,
+                        );
                         Scaffold.of(context).hideCurrentSnackBar();
                         Scaffold.of(context).showSnackBar(
                           SnackBar(
                             content: Text(
-                              'Added item to cart!',
-                              style: Theme.of(context).textTheme.headline4,
+                              'Item added to cart!',
+                              style: Theme.of(context).textTheme.headline3,
                             ),
+                            backgroundColor: Colors.blue,
                             duration: Duration(seconds: 2),
                             action: SnackBarAction(
                               label: 'UNDO',
