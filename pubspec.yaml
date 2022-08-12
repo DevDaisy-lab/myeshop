@@ -52,7 +52,6 @@ flutter:
     - assets/images/specprod4.jpg
     - assets/images/specprod5.jpg
     - assets/images/specprod6.jpg
-    - assets/images/banner.png
     - assets/images/banner1.png
 
   # An image asset can refer to one or more resolution-specific "variants", see

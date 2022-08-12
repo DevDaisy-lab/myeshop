@@ -24,12 +24,7 @@ class ProductDetailScreen extends StatelessWidget {
     ).findById(productId);
     return Scaffold(
       backgroundColor: Colors.lightBlue[50],
-      appBar: AppBar(
-        title: Text(
-          loadedProduct.title,
-          style: Theme.of(context).textTheme.headline3,
-        ),
-      ),
+      appBar: AppBar(),
       body: SingleChildScrollView(
         child: Column(
           children: <Widget>[
