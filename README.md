@@ -1,4 +1,6 @@
-## ProductsOverviewScreen ProductDetailScreen
-![](https://github.com/Laura555-p/myeshop/blob/master/assets/images/main.jpg)
-![](https://github.com/Laura555-p/myeshop/blob/master/assets/images/main1.jpg)
-![](https://github.com/Laura555-p/myeshop/blob/master/assets/images/details.jpg)
+# IOS Platform
+<p align="left">
+<img src="https://github.com/CodingFlutter/myeshop/blob/master/assets/images/1ios.png" width="300" height="600"/> 
+<img src="https://github.com/CodingFlutter/myeshop/blob/master/assets/images/2ios.png" width="300"height="600"/> 
+<img src="https://github.com/CodingFlutter/myeshop/blob/master/assets/images/3ios.png" width="300" height="600"/>
+</p>
