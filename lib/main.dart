@@ -27,7 +27,7 @@ class MyApp extends StatelessWidget {
       ],
       child: MaterialApp(
           debugShowCheckedModeBanner: false,
-          title: 'MyShop',
+          title: 'MyeShop',
           theme: ThemeData(
             textTheme: ThemeData.light().textTheme.copyWith(
                   headline1: TextStyle(
