@@ -5,13 +5,13 @@ import 'package:http/http.dart' as http;
 
 import './cart.dart';
 
-class OrderItem {
+class OrderIt {
   final String id;
   final double amount;
   final List<CartItem> products;
   final DateTime dateTime;
 
-  OrderItem({
+  OrderIt({
     required this.id,
     required this.amount,
     required this.products,
@@ -20,23 +20,23 @@ class OrderItem {
 }
 
 class Orders with ChangeNotifier {
-  List<OrderItem> _orders = [];
+  List<OrderIt> _orders = [];
 
-  List<OrderItem> get orders {
+  List<OrderIt> get orders {
     return [..._orders];
   }
 
   Future<void> fetchAndSetOrders() async {
     const url = 'https://flutter-update.firebaseio.com/orders.json';
     final response = await http.get(url);
-    final List<OrderItem> loadedOrders = [];
+    final List<OrderIt> loadedOrders = [];
     final extractedData = json.decode(response.body) as Map<String, dynamic>;
     if (extractedData == null) {
       return;
     }
     extractedData.forEach((orderId, orderData) {
       loadedOrders.add(
-        OrderItem(
+        OrderIt(
           id: orderId,
           amount: orderData['amount'],
           dateTime: DateTime.parse(orderData['dateTime']),
@@ -78,7 +78,7 @@ class Orders with ChangeNotifier {
     );
     _orders.insert(
       0,
-      OrderItem(
+      OrderIt(
         id: json.decode(response.body)['name'],
         amount: total,
         dateTime: timestamp,
