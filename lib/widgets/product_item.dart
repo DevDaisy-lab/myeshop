@@ -67,7 +67,7 @@ class ProductItem extends StatelessWidget {
                           ),
                         );
                       },
-                      color: Theme.of(context).accentColor,
+                      color: Colors.blue,
                     ),
                     SizedBox(width: 10),
                     Consumer<Product>(
@@ -77,7 +77,7 @@ class ProductItem extends StatelessWidget {
                               ? Icons.favorite
                               : Icons.favorite_border,
                         ),
-                        color: Theme.of(context).accentColor,
+                        color: Colors.blue,
                         onPressed: () {
                           product.toggleFavoriteStatus();
                         },
