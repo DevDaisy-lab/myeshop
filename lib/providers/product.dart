@@ -32,7 +32,7 @@ class Product with ChangeNotifier {
     final url = 'https://eshopapp-c4c50.firebaseio.com/products/$id.json';
     try {
       final response = await http.patch(
-        url,
+        Uri.parse(url),
         body: json.encode({
           'isFavorite': isFavorite,
         }),
