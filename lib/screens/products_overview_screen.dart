@@ -6,6 +6,7 @@ import '../widgets/products_grid.dart';
 import '../widgets/spec_product_item.dart';
 import '../widgets/badge.dart';
 import '../widgets/banner.dart';
+import '../widgets/app_drawer.dart';
 import '../providers/cart.dart';
 import './cart_screen.dart';
 import '../providers/products.dart';
