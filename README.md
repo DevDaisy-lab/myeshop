@@ -11,7 +11,7 @@ This is **a widget tree** of the **myeshop** app:
 
 # lib/main.dart
 
-In order to track states of the object, they need to be provided to widget further down the tree. Here a **MultiProvider** is used in order to provide three objects (in this case, **Products**, **Cart** and **Products**) at once to widget further down the tree. It's done by using **ChangeNotifierProvider.value(value:** object name  **)**, in this case object instance already exist and it just needs to be exposed, that's why **.value** constructor of a provider is used here.
+In order to track states of the object, they need to be provided to widget further down the tree. Here a **MultiProvider** is used in order to provide three objects (in this case, **Products**, **Cart** and **Orders**) at once to widget further down the tree. It's done by using **ChangeNotifierProvider.value(value:** object name  **)**, in this case object instance already exist and it just needs to be exposed, that's why **.value** constructor of a provider is used here.
 
 
 # IOS Platform
