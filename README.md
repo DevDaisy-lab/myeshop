@@ -1,6 +1,6 @@
 # myeshop
 
-The Flutter app, **myeshop**, an example of eshop. The app has four separate screens: Products Overview (**ProductsOverviewScreen**), Product Detail (**ProductDetailScreen**), Cart (**CartScreen**) and Order (**OrdersScreen**). Product Overview screen consist of **Banner** and **ProductsGrid** widgets. Product Details screen reflects details of certain product. Cart screen consist of **OrderButton** and **CartItem**. This example shows **provider** state managment approach and using **Firebase Realtime Database** for information of product saving and **Firebase Storage** for storing product pictures.
+The Flutter app, **myeshop**, an example of eshop. The app has four separate screens: Products Overview (**ProductsOverviewScreen**), Product Detail (**ProductDetailScreen**), Cart (**CartScreen**) and Order (**OrdersScreen**). Product Overview screen consist of **AppDrawer**, **Banner**, **SpecProductItem**, **Baged** and **ProductsGrid** widgets. Product Details screen reflects details of certain product. Cart screen consist of **OrderButton** and **CartItem**. Orders screen consist of **AppDrawer** and **OrderItem**.This example shows **provider** state managment approach and using **Firebase Realtime Database** for information of product saving and **Firebase Storage** for storing pictures of products.
 
 This is **a widget tree** of the **myeshop** app:
 
