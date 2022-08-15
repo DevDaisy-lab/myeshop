@@ -1,15 +1,16 @@
-import 'package:finished_eshop/widgets/product/app_drawer.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
-import '../widgets/product/products_grid.dart';
-import '../widgets/product/spec_product_item.dart';
-import '../widgets/product/badge.dart';
-import '../widgets/product/banner.dart';
-import '../widgets/product/app_drawer.dart';
 import '../providers/cart.dart';
-import './cart_screen.dart';
 import '../providers/products.dart';
+
+import '../widgets/product/app_drawer.dart';
+import '../widgets/product/badge.dart';
+import '../widgets/product/spec_product_item.dart';
+import '../widgets/product/banner.dart';
+import '../widgets/product/products_grid.dart';
+
+import './cart_screen.dart';
 
 enum FilterOptions {
   Favorites,
