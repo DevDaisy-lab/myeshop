@@ -36,9 +36,10 @@ class Products with ChangeNotifier {
   // }
 
   Future<void> fetchAndSetProducts() async {
-    const url = 'https://eshopapp-c4c50.firebaseio.com/products.json';
+    final url =
+        Uri.parse('https://eshopapp-c4c50.firebaseio.com/products.json');
     try {
-      final response = await http.get(Uri.parse(url));
+      final response = await http.get(url);
       print("response body" + response.body);
       final extractedData = json.decode(response.body) as Map<String, dynamic>;
 
@@ -66,10 +67,11 @@ class Products with ChangeNotifier {
   }
 
   Future<void> addProduct(Product product) async {
-    const url = 'https://eshopapp-c4c50.firebaseio.com/products.json';
+    final url =
+        Uri.parse('https://eshopapp-c4c50.firebaseio.com/products.json');
     try {
       final response = await http.post(
-        Uri.parse(url),
+        url,
         body: json.encode({
           'title': product.title,
           'description': product.description,
@@ -97,8 +99,9 @@ class Products with ChangeNotifier {
   Future<void> updateProduct(String id, Product newProduct) async {
     final prodIndex = _items.indexWhere((prod) => prod.id == id);
     if (prodIndex >= 0) {
-      final url = 'https://eshopapp-c4c50.firebaseio.com/products/$id.json';
-      await http.patch(Uri.parse(url),
+      final url =
+          Uri.parse('https://eshopapp-c4c50.firebaseio.com/products/$id.json');
+      await http.patch(url,
           body: json.encode({
             'title': newProduct.title,
             'description': newProduct.description,
@@ -113,12 +116,13 @@ class Products with ChangeNotifier {
   }
 
   Future<void> deleteProduct(String id) async {
-    final url = 'https://eshopapp-c4c50.firebaseio.com/products/$id.json';
+    final url =
+        Uri.parse('https://eshopapp-c4c50.firebaseio.com/products/$id.json');
     final existingProductIndex = _items.indexWhere((prod) => prod.id == id);
     Product? existingProduct = _items[existingProductIndex];
     _items.removeAt(existingProductIndex);
     notifyListeners();
-    final response = await http.delete(Uri.parse(url));
+    final response = await http.delete(url);
     if (response.statusCode >= 400) {
       _items.insert(existingProductIndex, existingProduct);
       notifyListeners();

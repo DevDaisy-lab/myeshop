@@ -29,10 +29,11 @@ class Product with ChangeNotifier {
     final oldStatus = isFavorite;
     isFavorite = !isFavorite;
     notifyListeners();
-    final url = 'https://eshopapp-c4c50.firebaseio.com/products/$id.json';
+    final url =
+        Uri.parse('https://eshopapp-c4c50.firebaseio.com/products/$id.json');
     try {
       final response = await http.patch(
-        Uri.parse(url),
+        url,
         body: json.encode({
           'isFavorite': isFavorite,
         }),
