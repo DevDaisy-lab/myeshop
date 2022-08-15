@@ -4,7 +4,7 @@ The Flutter app, **myeshop**, an example of eshop. The app has four separate scr
 
 This is **a widget tree** of the **myeshop** app:
 
-![](https://github.com/CodingFlutter/myeshop/blob/master/assets/images/widget_tree1.png)
+![](https://github.com/CodingFlutter/myeshop/blob/master/assets/images/widget_treee.png)
 
 
 # A Flutter app structure:
