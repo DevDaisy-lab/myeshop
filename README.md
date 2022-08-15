@@ -16,7 +16,7 @@ In order to track states of the object, they need to be provided to widget furth
 # lib/models
 
 # lib/providers
-This directory containes of three data models: **Products**, **Cart**, **Orders**, and an objects skeletons **Product**, **CartItem** and **OrderIt**. Above provided data models created with **ChangeNotifier** in order to notify widget tree about changes.
+This directory containes of three data models: **Products**, **Cart**, **Orders**, and an objects skeletons **Product**, **CartItem** and **OrderIt**. Above provided data models created with **ChangeNotifier** in order to notify widgets about changes.
 
 # lib/screens
 
