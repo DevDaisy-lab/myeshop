@@ -2,8 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 import '../providers/products.dart';
-import '../providers/product.dart';
-import '../providers/cart.dart';
 
 class ProductDetailScreen extends StatelessWidget {
   static const routeName = '/product-detail';
@@ -16,6 +14,8 @@ class ProductDetailScreen extends StatelessWidget {
       context,
       listen: false,
     ).findById(productId);
+
+    print(loadedProduct.description);
     return Scaffold(
       backgroundColor: Colors.lightBlue[50],
       appBar: AppBar(),
@@ -26,7 +26,7 @@ class ProductDetailScreen extends StatelessWidget {
               height: 300,
               width: double.infinity,
               child: Image.network(
-                loadedProduct.imageUrl,
+                loadedProduct.imageUrl!,
                 fit: BoxFit.cover,
               ),
             ),
@@ -42,7 +42,7 @@ class ProductDetailScreen extends StatelessWidget {
               padding: EdgeInsets.symmetric(horizontal: 10),
               width: double.infinity,
               child: Text(
-                loadedProduct.description,
+                loadedProduct.description!,
                 textAlign: TextAlign.center,
                 softWrap: true,
                 style: Theme.of(context).textTheme.headline4,

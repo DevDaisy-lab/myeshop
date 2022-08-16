@@ -44,10 +44,10 @@ class ProductItem extends StatelessWidget {
                       ),
                       onPressed: () {
                         cart.addItem(
-                          product.id,
-                          product.price,
-                          product.title,
-                          product.imageUrl,
+                          product.id!,
+                          product.price!,
+                          product.title!,
+                          product.imageUrl!,
                         );
                         Scaffold.of(context).hideCurrentSnackBar();
                         Scaffold.of(context).showSnackBar(
@@ -61,7 +61,7 @@ class ProductItem extends StatelessWidget {
                             action: SnackBarAction(
                               label: 'UNDO',
                               onPressed: () {
-                                cart.removeSingleItem(product.id);
+                                cart.removeSingleItem(product.id!);
                               },
                             ),
                           ),
@@ -86,14 +86,14 @@ class ProductItem extends StatelessWidget {
                   ],
                 ),
                 Hero(
-                  tag: product.id,
+                  tag: product.id!,
                   child: Container(
                     height: 55.0,
                     width: 55.0,
                     decoration: BoxDecoration(
                       image: DecorationImage(
                         image: NetworkImage(
-                          product.imageUrl,
+                          product.imageUrl!,
                         ),
                         fit: BoxFit.cover,
                       ),
@@ -104,7 +104,7 @@ class ProductItem extends StatelessWidget {
                   height: 2.0,
                 ),
                 Text(
-                  product.title,
+                  product.title!,
                   style: Theme.of(context).textTheme.headline5,
                   textAlign: TextAlign.center,
                 ),
