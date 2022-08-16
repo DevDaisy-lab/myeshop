@@ -3,6 +3,7 @@ import 'package:provider/provider.dart';
 
 import '../providers/product.dart';
 import '../providers/products.dart';
+import '../widgets/product/app_drawer.dart';
 
 class EditProductScreen extends StatefulWidget {
   static const routeName = '/edit-product';
@@ -93,7 +94,7 @@ class _EditProductScreenState extends State<EditProductScreen> {
     setState(() {
       _isLoading = true;
     });
-    if (_editedProduct.id != null) {
+    if (_editedProduct.id != '') {
       await Provider.of<Products>(context, listen: false)
           .updateProduct(_editedProduct.id!, _editedProduct);
     } else {
@@ -116,13 +117,12 @@ class _EditProductScreenState extends State<EditProductScreen> {
             ],
           ),
         );
+      } finally {
+        setState(() {
+          _isLoading = false;
+        });
+        Navigator.of(context).pop();
       }
-//      finally {
-//        setState(() {
-//          _isLoading = false;
-//        });
-//        Navigator.of(context).pop();
-//      }
     }
     setState(() {
       _isLoading = false;
@@ -139,6 +139,7 @@ class _EditProductScreenState extends State<EditProductScreen> {
           IconButton(icon: Icon(Icons.save), onPressed: _saveForm),
         ],
       ),
+      drawer: AppDrawer(),
       body: _isLoading
           ? Center(
               child: CircularProgressIndicator(),
