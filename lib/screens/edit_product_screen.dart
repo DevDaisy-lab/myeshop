@@ -4,6 +4,7 @@ import 'package:provider/provider.dart';
 import '../providers/product.dart';
 import '../providers/products.dart';
 import '../widgets/product/app_drawer.dart';
+import '../screens/products_overview_screen.dart';
 
 class EditProductScreen extends StatefulWidget {
   static const routeName = '/edit-product';
@@ -45,7 +46,7 @@ class _EditProductScreenState extends State<EditProductScreen> {
   void didChangeDependencies() {
     if (_isInit) {
       final productId = ModalRoute.of(context)!.settings.arguments as String;
-      if (productId != null) {
+      if (productId != '') {
         _editedProduct =
             Provider.of<Products>(context, listen: false).findById(productId);
         _initValue = {
@@ -91,6 +92,7 @@ class _EditProductScreenState extends State<EditProductScreen> {
       return;
     }
     _form.currentState!.save();
+
     setState(() {
       _isLoading = true;
     });
@@ -122,13 +124,16 @@ class _EditProductScreenState extends State<EditProductScreen> {
           _isLoading = false;
         });
         Navigator.of(context).pop();
+
+        //Navigator.of(context).pushNamed(ProductsOverviewScreen.routeName);
       }
     }
-    setState(() {
-      _isLoading = false;
-    });
-    Navigator.of(context).pop();
   }
+  //   setState(() {
+  //     _isLoading = false;
+  //   });
+  //   Navigator.of(context).pop();
+  // }
 
   @override
   Widget build(BuildContext context) {
@@ -136,7 +141,12 @@ class _EditProductScreenState extends State<EditProductScreen> {
       appBar: AppBar(
         title: Text('Edit Product'),
         actions: <Widget>[
-          IconButton(icon: Icon(Icons.save), onPressed: _saveForm),
+          IconButton(
+            icon: Icon(Icons.save),
+            onPressed: _saveForm,
+
+            // Navigator.of(context).pushNamed(ProductsOverviewScreen.routeName);
+          ),
         ],
       ),
       drawer: AppDrawer(),
