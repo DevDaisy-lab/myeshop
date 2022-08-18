@@ -46,15 +46,15 @@ class _EditProductScreenState extends State<EditProductScreen> {
   void didChangeDependencies() {
     if (_isInit) {
       final productId = ModalRoute.of(context)!.settings.arguments as String;
-      if (productId != '') {
+      if (productId != null) {
         _editedProduct =
             Provider.of<Products>(context, listen: false).findById(productId);
         _initValue = {
           'title': _editedProduct.title!,
           'description': _editedProduct.description!,
           'price': _editedProduct.price.toString(),
-          //'imageUrl': _editedProduct.imageUrl,
-          'imageUrl': '',
+          'imageUrl': _editedProduct.imageUrl!,
+          // 'imageUrl': '',
         };
       }
       _imageUrlController.text = _editedProduct.imageUrl!;
@@ -123,21 +123,22 @@ class _EditProductScreenState extends State<EditProductScreen> {
         setState(() {
           _isLoading = false;
         });
-        // Navigator.of(context).pop();
-
-        Navigator.of(context).pushNamed(ProductsOverviewScreen.routeName);
+        Navigator.of(context).pop();
       }
     }
+
+    //after update goes to user product screen
+
+    setState(() {
+      _isLoading = false;
+    });
+    Navigator.of(context).pop();
   }
-  //   setState(() {
-  //     _isLoading = false;
-  //   });
-  //   Navigator.of(context).pop();
-  // }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.lightBlue[50],
       appBar: AppBar(
         title: Text('Edit Product'),
         actions: <Widget>[

@@ -19,6 +19,7 @@ class UserProductsScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     //final productsData = Provider.of<Products>(context);
     return Scaffold(
+      backgroundColor: Colors.lightBlue[50],
       appBar: AppBar(
         title: Text(
           'Your Products',
