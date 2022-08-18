@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 class Bannerr extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    final textStyle3 = Theme.of(context).textTheme.headline3;
     return Container(
       child: Stack(
         children: [
@@ -20,7 +21,7 @@ class Bannerr extends StatelessWidget {
               alignment: Alignment.center,
               child: Text(
                 'Special Offers',
-                style: Theme.of(context).textTheme.headline3,
+                style: textStyle3,
               ),
             ),
           ),

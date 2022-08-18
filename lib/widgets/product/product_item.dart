@@ -10,6 +10,9 @@ class ProductItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final textStyle3 = Theme.of(context).textTheme.headline3;
+    final textStyle5 = Theme.of(context).textTheme.headline5;
+    final textStyle4 = Theme.of(context).textTheme.headline4;
     final product = Provider.of<Product>(context, listen: false);
     final cart = Provider.of<Cart>(context, listen: false);
     return Padding(
@@ -54,7 +57,7 @@ class ProductItem extends StatelessWidget {
                           SnackBar(
                             content: Text(
                               'Item added to cart!',
-                              style: Theme.of(context).textTheme.headline3,
+                              style: textStyle3,
                             ),
                             backgroundColor: Colors.blue,
                             duration: Duration(seconds: 2),
@@ -105,7 +108,7 @@ class ProductItem extends StatelessWidget {
                 ),
                 Text(
                   product.title!,
-                  style: Theme.of(context).textTheme.headline5,
+                  style: textStyle4,
                   textAlign: TextAlign.center,
                 ),
                 SizedBox(
@@ -113,7 +116,7 @@ class ProductItem extends StatelessWidget {
                 ),
                 Text(
                   '\$${product.price}',
-                  style: Theme.of(context).textTheme.headline5,
+                  style: textStyle5,
                 ),
               ],
             ),

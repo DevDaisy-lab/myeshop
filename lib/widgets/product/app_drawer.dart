@@ -6,6 +6,7 @@ class AppDrawer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final textStyle4 = Theme.of(context).textTheme.headline4;
     return Drawer(
       backgroundColor: Colors.lightBlue[50],
       child: Column(
@@ -16,7 +17,10 @@ class AppDrawer extends StatelessWidget {
           Divider(),
           ListTile(
             leading: Icon(Icons.shop),
-            title: Text('Shop'),
+            title: Text(
+              'Shop',
+              style: textStyle4,
+            ),
             onTap: () {
               Navigator.of(context).pushReplacementNamed('/');
             },
@@ -24,7 +28,10 @@ class AppDrawer extends StatelessWidget {
           Divider(),
           ListTile(
             leading: Icon(Icons.payment),
-            title: Text('Orders'),
+            title: Text(
+              'Orders',
+              style: textStyle4,
+            ),
             onTap: () {
               Navigator.of(context).pushReplacementNamed('/orders');
             },
@@ -32,7 +39,10 @@ class AppDrawer extends StatelessWidget {
           Divider(),
           ListTile(
             leading: Icon(Icons.edit),
-            title: Text('Manage Product'),
+            title: Text(
+              'Manage Product',
+              style: textStyle4,
+            ),
             onTap: () {
               Navigator.of(context).pushReplacementNamed('/user-products');
             },

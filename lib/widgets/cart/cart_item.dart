@@ -22,6 +22,8 @@ class CartItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final textStyle4 = Theme.of(context).textTheme.headline4;
+    final textStyle5 = Theme.of(context).textTheme.headline5;
     return Dismissible(
       key: ValueKey(id),
       background: Container(
@@ -43,9 +45,13 @@ class CartItem extends StatelessWidget {
         return showDialog(
           context: context,
           builder: (ctx) => AlertDialog(
-            title: Text('Are you sure?'),
+            title: Text(
+              'Are you sure?',
+              style: textStyle4,
+            ),
             content: Text(
               'Do you want to remove the item from the cart?',
+              style: textStyle4,
             ),
             actions: <Widget>[
               TextButton(
@@ -87,9 +93,18 @@ class CartItem extends StatelessWidget {
                 ),
               ),
             ),
-            title: Text(title),
-            subtitle: Text('Total: \$${(price * quantity)}'),
-            trailing: Text('$quantity x'),
+            title: Text(
+              title,
+              style: textStyle4,
+            ),
+            subtitle: Text(
+              'Total: \$${(price * quantity)}',
+              style: textStyle5,
+            ),
+            trailing: Text(
+              '$quantity x',
+              style: textStyle5,
+            ),
           ),
         ),
       ),

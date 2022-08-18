@@ -10,35 +10,37 @@ class CartScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final textStyle1 = Theme.of(context).textTheme.headline1;
+    final textStyle3 = Theme.of(context).textTheme.headline3;
+    final textStyle2 = Theme.of(context).textTheme.headline2;
+
     final cart = Provider.of<Cart>(context);
 
     return Scaffold(
       backgroundColor: Colors.lightBlue[50],
       appBar: AppBar(
-        title: Text('Your Cart'),
+        title: Text(
+          'Your Cart',
+          style: textStyle1,
+        ),
       ),
       body: Column(
         children: <Widget>[
           Card(
             margin: EdgeInsets.all(15),
             child: Padding(
-              padding: EdgeInsets.all(8),
+              padding: EdgeInsets.all(10),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: <Widget>[
                   Text(
                     'Total',
-                    style: TextStyle(fontSize: 20),
+                    style: textStyle2,
                   ),
                   Spacer(),
                   Chip(
-                    label: Text(
-                      '\$${cart.totalAmount.toStringAsFixed(2)}',
-                      style: TextStyle(
-                        color:
-                            Theme.of(context).primaryTextTheme.headline6?.color,
-                      ),
-                    ),
+                    label: Text('\$${cart.totalAmount.toStringAsFixed(2)}',
+                        style: textStyle3),
                     backgroundColor: Theme.of(context).primaryColor,
                   ),
                   OrderButton(cart: cart)
@@ -83,14 +85,13 @@ class _OrderButtonState extends State<OrderButton> {
 
   @override
   Widget build(BuildContext context) {
+    final textStyle2 = Theme.of(context).textTheme.headline2;
     return TextButton(
       child: _isLoading
           ? CircularProgressIndicator()
           : Text(
-              'ORDER NOW',
-              style: TextStyle(
-                color: Theme.of(context).primaryColor,
-              ),
+              'Order Now',
+              style: textStyle2,
             ),
       onPressed: (widget.cart.totalAmount <= 0 || _isLoading)
           ? null

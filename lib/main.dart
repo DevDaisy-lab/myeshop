@@ -41,38 +41,46 @@ class MyApp extends StatelessWidget {
         theme: ThemeData(
           textTheme: ThemeData.light().textTheme.copyWith(
                 headline1: TextStyle(
-                  fontFamily: 'Lato',
+                  fontFamily: 'OpenSans',
                   color: Colors.white,
-                  fontWeight: FontWeight.w600,
-                  fontSize: 24.0,
+                  fontWeight: FontWeight.w500,
+                  fontSize: 20.0,
                 ),
                 headline2: TextStyle(
-                  fontFamily: 'Lato',
-                  color: Colors.black,
-                  fontWeight: FontWeight.w400,
-                  fontSize: 22.0,
+                  fontFamily: 'OpenSans',
+                  color: Colors.lightBlue,
+                  fontWeight: FontWeight.w500,
+                  fontSize: 17.0,
                 ),
                 headline3: TextStyle(
-                  fontFamily: 'Lato',
+                  fontFamily: 'OpenSans',
                   color: Colors.white,
                   fontWeight: FontWeight.w600,
-                  fontSize: 18.0,
+                  fontSize: 17.0,
                 ),
                 headline4: TextStyle(
-                  fontFamily: 'Lato',
+                  fontFamily: 'OpenSans',
                   color: Colors.black,
-                  fontWeight: FontWeight.w400,
-                  fontSize: 18.0,
+                  fontWeight: FontWeight.w500,
+                  fontSize: 16.0,
                 ),
                 headline5: TextStyle(
-                  fontFamily: 'Lato',
+                  fontFamily: 'OpenSans',
                   color: Colors.black,
-                  fontWeight: FontWeight.w400,
-                  fontSize: 15.0,
+                  fontWeight: FontWeight.w500,
+                  fontSize: 14.0,
+                ),
+                headline6: TextStyle(
+                  fontFamily: 'OpenSans',
+                  color: Colors.white,
+                  fontWeight: FontWeight.w500,
+                  fontSize: 10.0,
                 ),
               ),
-          colorScheme: ColorScheme.fromSwatch(primarySwatch: Colors.blue)
-              .copyWith(secondary: Colors.grey),
+          colorScheme:
+              ColorScheme.fromSwatch(primarySwatch: Colors.blue).copyWith(
+            secondary: Colors.lightBlue[400],
+          ),
         ),
         home: ProductsOverviewScreen(),
         routes: {

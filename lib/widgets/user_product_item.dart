@@ -15,6 +15,7 @@ class UserProductItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     //final scaffold = Scaffold.of(context);
+    final textStyle5 = Theme.of(context).textTheme.headline5;
     return ListTile(
       title: Text(title),
       leading: CircleAvatar(
@@ -44,6 +45,7 @@ class UserProductItem extends StatelessWidget {
                     SnackBar(
                       content: Text(
                         'Deleting failed !',
+                        style: textStyle5,
                         textAlign: TextAlign.center,
                       ),
                     ),
