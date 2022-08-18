@@ -16,11 +16,19 @@ class UserProductItem extends StatelessWidget {
   Widget build(BuildContext context) {
     //final scaffold = Scaffold.of(context);
     final textStyle5 = Theme.of(context).textTheme.headline5;
+    final textStyle4 = Theme.of(context).textTheme.headline4;
     return ListTile(
-      title: Text(title),
-      leading: CircleAvatar(
-        backgroundImage: NetworkImage(imageUrl),
-        backgroundColor: Colors.white,
+      title: Text(
+        title,
+        style: textStyle4,
+      ),
+      leading: Container(
+        width: 55,
+        height: 55,
+        child: CircleAvatar(
+          backgroundImage: NetworkImage(imageUrl),
+          backgroundColor: Colors.white,
+        ),
       ),
       trailing: Container(
         width: 100,

@@ -34,11 +34,15 @@ class _OrdersScreenState extends State<OrdersScreen> {
 
   @override
   Widget build(BuildContext context) {
+    final textStyle1 = Theme.of(context).textTheme.headline1;
     final orderData = Provider.of<Orders>(context);
     return Scaffold(
       backgroundColor: Colors.lightBlue[50],
       appBar: AppBar(
-        title: Text('Your Orders'),
+        title: Text(
+          'Your Orders',
+          style: textStyle1,
+        ),
       ),
       drawer: AppDrawer(),
       body: _isLoading

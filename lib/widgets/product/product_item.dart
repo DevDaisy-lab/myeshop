@@ -42,6 +42,7 @@ class ProductItem extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.end,
                   children: [
                     IconButton(
+                      iconSize: 18,
                       icon: Icon(
                         Icons.shopping_cart,
                       ),
@@ -75,6 +76,7 @@ class ProductItem extends StatelessWidget {
                     SizedBox(width: 10),
                     Consumer<Product>(
                       builder: (ctx, product, _) => IconButton(
+                        iconSize: 18,
                         icon: Icon(
                           product.isFavorite
                               ? Icons.favorite
@@ -91,7 +93,7 @@ class ProductItem extends StatelessWidget {
                 Hero(
                   tag: product.id!,
                   child: Container(
-                    height: 55.0,
+                    height: 50.0,
                     width: 55.0,
                     decoration: BoxDecoration(
                       image: DecorationImage(

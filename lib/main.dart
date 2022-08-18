@@ -60,13 +60,13 @@ class MyApp extends StatelessWidget {
                 ),
                 headline4: TextStyle(
                   fontFamily: 'OpenSans',
-                  color: Colors.black,
+                  color: Colors.blue,
                   fontWeight: FontWeight.w500,
                   fontSize: 16.0,
                 ),
                 headline5: TextStyle(
                   fontFamily: 'OpenSans',
-                  color: Colors.black,
+                  color: Colors.lightBlue[500],
                   fontWeight: FontWeight.w500,
                   fontSize: 14.0,
                 ),

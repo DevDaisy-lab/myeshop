@@ -17,12 +17,14 @@ class UserProductsScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final textStyle1 = Theme.of(context).textTheme.headline1;
     //final productsData = Provider.of<Products>(context);
     return Scaffold(
       backgroundColor: Colors.lightBlue[50],
       appBar: AppBar(
         title: Text(
           'Your Products',
+          style: textStyle1,
         ),
         actions: <Widget>[
           IconButton(

@@ -16,7 +16,10 @@ class AppDrawer extends StatelessWidget {
           ),
           Divider(),
           ListTile(
-            leading: Icon(Icons.shop),
+            leading: Icon(
+              Icons.shop,
+              color: Colors.blue,
+            ),
             title: Text(
               'Shop',
               style: textStyle4,
@@ -27,7 +30,10 @@ class AppDrawer extends StatelessWidget {
           ),
           Divider(),
           ListTile(
-            leading: Icon(Icons.payment),
+            leading: Icon(
+              Icons.payment,
+              color: Colors.blue,
+            ),
             title: Text(
               'Orders',
               style: textStyle4,
@@ -38,7 +44,10 @@ class AppDrawer extends StatelessWidget {
           ),
           Divider(),
           ListTile(
-            leading: Icon(Icons.edit),
+            leading: Icon(
+              Icons.edit,
+              color: Colors.blue,
+            ),
             title: Text(
               'Manage Product',
               style: textStyle4,

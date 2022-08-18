@@ -21,14 +21,19 @@ class _OrderItemState extends State<OrderItem> {
   Widget build(BuildContext context) {
     //final textStyle3 = Theme.of(context).textTheme.headline3;
     final textStyle4 = Theme.of(context).textTheme.headline4;
+    final textStyle5 = Theme.of(context).textTheme.headline5;
     return Card(
       margin: EdgeInsets.all(10),
       child: Column(
         children: [
           ListTile(
-            title: Text('\$${widget.order.amount.toStringAsFixed(2)}'),
+            title: Text(
+              '\$${widget.order.amount.toStringAsFixed(2)}',
+              style: textStyle4,
+            ),
             subtitle: Text(
               DateFormat('dd/MM/yyyy hh:mm').format(widget.order.dateTime),
+              style: textStyle5,
             ),
             trailing: IconButton(
               icon: Icon(
@@ -51,13 +56,18 @@ class _OrderItemState extends State<OrderItem> {
                       (prod) => Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          Text(
-                            prod.title,
-                            style: textStyle4,
+                          Container(
+                            child: Text(
+                              prod.title,
+                              style: textStyle4,
+                            ),
                           ),
-                          Text(
-                            '${prod.quantity}x \$${prod.price}',
-                            style: textStyle4,
+                          Container(
+                            width: 75,
+                            child: Text(
+                              '${prod.quantity}x \$${prod.price}',
+                              style: textStyle4,
+                            ),
                           )
                         ],
                       ),

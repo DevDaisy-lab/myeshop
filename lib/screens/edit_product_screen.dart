@@ -137,10 +137,15 @@ class _EditProductScreenState extends State<EditProductScreen> {
 
   @override
   Widget build(BuildContext context) {
+    final textStyle1 = Theme.of(context).textTheme.headline1;
+
     return Scaffold(
       backgroundColor: Colors.lightBlue[50],
       appBar: AppBar(
-        title: Text('Edit Product'),
+        title: Text(
+          'Edit Product',
+          style: textStyle1,
+        ),
         actions: <Widget>[
           IconButton(
             icon: Icon(Icons.save),
