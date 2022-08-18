@@ -110,7 +110,7 @@ class _EditProductScreenState extends State<EditProductScreen> {
             title: Text('An error occured!'),
             content: Text('Something went wrong'),
             actions: <Widget>[
-              FlatButton(
+              TextButton(
                 child: Text('Okay'),
                 onPressed: () {
                   Navigator.of(ctx).pop();
@@ -123,9 +123,9 @@ class _EditProductScreenState extends State<EditProductScreen> {
         setState(() {
           _isLoading = false;
         });
-        Navigator.of(context).pop();
+        // Navigator.of(context).pop();
 
-        //Navigator.of(context).pushNamed(ProductsOverviewScreen.routeName);
+        Navigator.of(context).pushNamed(ProductsOverviewScreen.routeName);
       }
     }
   }

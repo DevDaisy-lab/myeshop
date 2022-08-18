@@ -1,3 +1,5 @@
+// ignore_for_file: import_of_legacy_library_into_null_safe
+
 import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
@@ -17,7 +19,7 @@ class _OrderItemState extends State<OrderItem> {
 
   @override
   Widget build(BuildContext context) {
-    final textStyle3 = Theme.of(context).textTheme.headline3;
+    //final textStyle3 = Theme.of(context).textTheme.headline3;
     final textStyle4 = Theme.of(context).textTheme.headline4;
     return Card(
       margin: EdgeInsets.all(10),

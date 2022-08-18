@@ -31,9 +31,9 @@ class Orders with ChangeNotifier {
     final response = await http.get(url);
     final List<OrderIt> loadedOrders = [];
     final extractedData = json.decode(response.body) as Map<String, dynamic>;
-    if (extractedData == null) {
-      return;
-    }
+    // if (extractedData == null) { dart consider as an error
+    //   return;
+    // }
     extractedData.forEach((orderId, orderData) {
       loadedOrders.add(
         OrderIt(
