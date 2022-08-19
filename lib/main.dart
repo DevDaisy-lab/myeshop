@@ -45,7 +45,7 @@ class MyApp extends StatelessWidget {
                 ),
                 headline2: TextStyle(
                   fontFamily: 'OpenSans',
-                  color: Colors.lightBlue,
+                  color: Colors.blue,
                   fontWeight: FontWeight.w500,
                   fontSize: 17.0,
                 ),
@@ -63,7 +63,7 @@ class MyApp extends StatelessWidget {
                 ),
                 headline5: TextStyle(
                   fontFamily: 'OpenSans',
-                  color: Colors.lightBlue[500],
+                  color: Colors.blue,
                   fontWeight: FontWeight.w500,
                   fontSize: 14.0,
                 ),

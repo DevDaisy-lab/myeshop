@@ -8,6 +8,8 @@ class ProductDetailScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final textsStyle3 = Theme.of(context).textTheme.headline3;
+    final textsStyle2 = Theme.of(context).textTheme.headline2;
     final productId =
         ModalRoute.of(context)?.settings.arguments as String; // is the id!
     final loadedProduct = Provider.of<Products>(
@@ -22,8 +24,9 @@ class ProductDetailScreen extends StatelessWidget {
       body: SingleChildScrollView(
         child: Column(
           children: <Widget>[
+            SizedBox(height: 5),
             Container(
-              height: 300,
+              height: 330,
               width: double.infinity,
               child: Image.network(
                 loadedProduct.imageUrl!,
@@ -32,21 +35,34 @@ class ProductDetailScreen extends StatelessWidget {
             ),
             SizedBox(height: 10),
             Text(
-              '\$${loadedProduct.price}',
-              style: Theme.of(context).textTheme.headline4,
+              '${loadedProduct.title}',
+              style: textsStyle2,
+              textScaleFactor: 2.0,
+            ),
+            SizedBox(height: 8),
+            Chip(
+              backgroundColor: Colors.blue,
+              label: Text(
+                '\$${loadedProduct.price}',
+                style: textsStyle3,
+                textScaleFactor: 1.2,
+              ),
             ),
             SizedBox(
-              height: 10,
+              height: 30,
             ),
             Container(
               padding: EdgeInsets.symmetric(horizontal: 10),
-              width: double.infinity,
+              width: 300,
               child: Text(
                 loadedProduct.description!,
-                textAlign: TextAlign.center,
+                textAlign: TextAlign.left,
                 softWrap: true,
                 style: Theme.of(context).textTheme.headline4,
               ),
+            ),
+            SizedBox(
+              height: 20,
             ),
           ],
         ),
