@@ -28,4 +28,9 @@ This directory containes of three data models: **Products**, **Cart**, **Orders*
 <img src="https://github.com/CodingFlutter/myeshop/blob/master/assets/images/2ios.png" width="300"height="600"/> 
 <img src="https://github.com/CodingFlutter/myeshop/blob/master/assets/images/3ios.png" width="300" height="600"/>
 <img src="https://github.com/CodingFlutter/myeshop/blob/master/assets/images/4ios.png" width="300" height="600"/>
+<img src="https://github.com/CodingFlutter/myeshop/blob/master/assets/images/5ios.png" width="300" height="600"/>
+<img src="https://github.com/CodingFlutter/myeshop/blob/master/assets/images/6ios.png" width="300" height="600"/>
+<img src="https://github.com/CodingFlutter/myeshop/blob/master/assets/images/7ios.png" width="300" height="600"/>
+<img src="https://github.com/CodingFlutter/myeshop/blob/master/assets/images/8ios.png" width="300" height="600"/>
+<img src="https://github.com/CodingFlutter/myeshop/blob/master/assets/images/9ios.png" width="300" height="600"/>
 </p>
