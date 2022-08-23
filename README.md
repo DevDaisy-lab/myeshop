@@ -13,8 +13,6 @@ This is **a widget tree** of the **myeshop** app:
 
 In order to track states of the object, they need to be provided to widget further down the tree. Here a **MultiProvider** is used in order to provide three objects (in this case, **Products**, **Cart** and **Orders**) at once to widget further down the tree. It's done by using **ChangeNotifierProvider.value(value:** object name  **)**, in this case object instance already exist and it just needs to be exposed, that's why **.value** constructor of a **provider** is used here.
 
-# lib/models
-
 # lib/providers
 This directory containes of three data models: **Products**, **Cart**, **Orders**, and an objects skeletons **Product**, **CartItem** and **OrderIt**. Above provided data models created with **ChangeNotifier** in order to notify widgets about changes.
 
