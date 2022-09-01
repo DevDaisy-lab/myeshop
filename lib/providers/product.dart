@@ -30,7 +30,7 @@ class Product with ChangeNotifier {
     isFavorite = !isFavorite;
     notifyListeners();
     final url =
-        Uri.parse('https://eshopapp-c4c50.firebaseio.com/products/$id.json');
+        Uri.parse('https://nameofdatabase.firebaseio.com/products/$id.json');
     try {
       final response = await http.patch(
         url,

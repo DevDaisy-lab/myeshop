@@ -37,7 +37,7 @@ class Products with ChangeNotifier {
 
   Future<void> fetchAndSetProducts() async {
     final url =
-        Uri.parse('https://eshopapp-c4c50.firebaseio.com/products.json');
+        Uri.parse('https://nameofdatabase.firebaseio.com/products.json');
     try {
       final response = await http.get(url);
       print("response body" + response.body);
@@ -68,7 +68,7 @@ class Products with ChangeNotifier {
 
   Future<void> addProduct(Product product) async {
     final url =
-        Uri.parse('https://eshopapp-c4c50.firebaseio.com/products.json');
+        Uri.parse('https://nameofdatabase.firebaseio.com/products.json');
     try {
       final response = await http.post(
         url,
@@ -100,7 +100,7 @@ class Products with ChangeNotifier {
     final prodIndex = _items.indexWhere((prod) => prod.id == id);
     if (prodIndex >= 0) {
       final url =
-          Uri.parse('https://eshopapp-c4c50.firebaseio.com/products/$id.json');
+          Uri.parse('https://nameofdatabase.firebaseio.com/products/$id.json');
       await http.patch(url,
           body: json.encode({
             'title': newProduct.title,
@@ -117,7 +117,7 @@ class Products with ChangeNotifier {
 
   Future<void> deleteProduct(String id) async {
     final url =
-        Uri.parse('https://eshopapp-c4c50.firebaseio.com/products/$id.json');
+        Uri.parse('https://nameofdatabase.firebaseio.com/products/$id.json');
     final existingProductIndex = _items.indexWhere((prod) => prod.id == id);
     Product? existingProduct = _items[existingProductIndex];
     _items.removeAt(existingProductIndex);
